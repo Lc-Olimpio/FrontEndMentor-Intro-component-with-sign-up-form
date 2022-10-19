@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%) ;
+  background-image: url(../images/bg-intro-desktop.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin: 5em;
+}
+
+.s1 {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48%;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    margin-top: 1em;
+  }
+}
+
+.s2{
+  width: 48%;
+  
+
+  h2 {
+    background-color: hsl(248, 32%, 49%);
+    padding: 1em;
+    margin-bottom: 1em;
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8em;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em  hsla(249, 10%, 26%, 0.300) ;
+  }
+
+  form {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2em;
+    border-radius: 0.5em;
+
+    input {
+      width: 100%;
+      margin: 0.5em 0;
+      padding: 1em;
+      font-weight: 700;
+      border: 1px solid hsl(246, 25%, 77%);
+      border-radius: 0.3em;
+      outline: none;
+
+      &:focus {
+        border: 1px solid hsl(249, 10%, 26%) ;
+      }
+    }
+
+    button {
+      background-color: hsl(154deg, 59%, 51%);
+      width: 100%;
+      padding: 1em;
+      outline: none;
+      border: 1px solid hsl(154deg, 70%, 35%);
+      border-radius: 0.2em;
+      box-shadow: 0em 0.2em 0em hsl(154deg 70% 35%);
+      font-size: 0.8em;
+      font-weight: 600;
+      color: white;
+      margin: 1em 0;
+    }
+  }
+}
+
+.attribution { 
+  position: absolute;
+  bottom: 1em;
+  font-size: 11px; 
+  text-align: center;
+
+  a { 
+    color: hsl(228, 45%, 44%); 
+  }
+}
