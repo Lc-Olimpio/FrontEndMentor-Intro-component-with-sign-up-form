@@ -28,23 +28,24 @@ body {
   justify-content: center;
   width: 48%;
 
-  h1 {
-    font-size: 3em;
-  }
-
   p {
     margin-top: 1em;
   }
 }
 
+h1 {
+  font-size: 3em;
+}
+
 .s2{
   width: 48%;
+  
   
 
   h2 {
     background-color: hsl(248, 32%, 49%);
     padding: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     color: hsl(0, 0%, 100%);
     font-size: 0.8em;
     font-weight: 400;
@@ -57,20 +58,52 @@ body {
     background-color: hsl(0, 0%, 100%);
     padding: 2em;
     border-radius: 0.5em;
+    box-shadow: 0 0.5em  hsla(249, 10%, 26%, 0.300) ;
 
-    input {
-      width: 100%;
-      margin: 0.5em 0;
-      padding: 1em;
-      font-weight: 700;
+    div{
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
       border: 1px solid hsl(246, 25%, 77%);
       border-radius: 0.3em;
-      outline: none;
+      margin: 0.5em 0 1em 0;
+      padding: 0.2em;
 
-      &:focus {
-        border: 1px solid hsl(249, 10%, 26%) ;
+      input {
+        width: 90%;
+        padding: 1em 0.5em;
+        font-weight: 700;
+        border: none;
+        outline: none;
       }
+
     }
+
+    img {
+      width: 1.5em;
+      height: 1.5em;
+      align-self: center;
+      margin-right:1em ;
+    }
+
+    .diverror {
+      border: 2px solid hsl(0, 100%, 74%);
+      margin: 0;
+    }
+
+    .error {
+      display: none;
+      margin: 1em 0;
+    }
+
+    span {
+      display: block;
+      color: hsl(0, 100%, 74%);
+      text-align: end;
+      font-size: 0.6em;
+      font-weight: 500;
+      margin: 0.2em 0 1em 0;
+    }    
 
     button {
       background-color: hsl(154deg, 59%, 51%);
@@ -84,9 +117,30 @@ body {
       font-weight: 600;
       color: white;
       margin: 1em 0;
+
+      &:hover {
+        cursor: pointer;
+        background-color: hsl(154deg 75% 56%);
+        box-shadow: 0em 0.2em 0em hsl(154deg 57% 47%);
+      }
+    }
+
+    p {
+      font-size: 0.7em;
+      color: hsl(246, 25%, 77%);
+      text-align: center;
+     display: block;
+
+      a {
+        color: hsl(0, 100%, 74%);
+        font-weight: bold;
+        text-decoration: none;
+      }
     }
   }
 }
+
+
 
 .attribution { 
   position: absolute;
@@ -96,5 +150,35 @@ body {
 
   a { 
     color: hsl(228, 45%, 44%); 
+  }
+}
+
+@media (max-width: 870px) {
+
+  body {
+    flex-direction: column;
+    background-image: url(../images/bg-intro-mobile.png);
+    background-position: center;
+  }
+
+  .main {
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+  }
+
+  .attribution {
+    position: relative;
+  }
+
+  .s1, .s2 {
+    width: 90%;
+    margin: 2em 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
   }
 }
